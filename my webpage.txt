@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Webpage with Aside</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(to right, pink, red);
+      color: black;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      text-align: center;
+      padding: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    main {
+      display: flex;
+      padding: 20px;
+    }
+
+    section {
+      flex: 3;
+      padding: 20px;
+    }
+
+    aside {
+      flex: 1;
+      background: #f1f1f1;
+      padding: 20px;
+      margin-left: 20px;
+      border-radius: 5px;
+      height: fit-content;
+    }
+
+
+    #home {
+      background-image: url("project/557962196_122238118832178511_687166549822289399_n.jpg"); /* <-- imong picture diri */
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      color: black;
+      text-shadow: 1px 1px 2px white;
+    }
+
+    #about {
+      background: #e8f5e9;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    #about table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    #about th, #about td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+
+    #contact {
+      background: lightgreen;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    form {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border: 1px solid #333;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #388E3C;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    aside a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    aside a:hover {
+      color: #4CAF50;
+    }
+
+    aside ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    aside li {
+      margin-bottom: 8px;
+    }
+    #home img {
+      margin-top: 20px;
+      border-radius: 10px;
+      width: 150px;
+      height: auto;
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Webpage</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <div>
+      <section id="home">
+        <h2>Home</h2>
+
+<h3>Welcome to my Webpage</h3>
+        
+        <img src="557962196_122238118832178511_687166549822289399_n.jpg" alt="iTS ME!">
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>This page is all about learning HTML and CSS.</p>
+
+        <h3>My Hobbies</h3>
+        <table>
+          <tr>
+            <th>Hobby</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td>Coding</td>
+            <td>Intermediate</td>
+          </tr>
+          <tr>
+            <td>Drawing</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <td>Reading</td>
+            <td>Advanced</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Reach me at Email: <b>aciretan61@gmail.com</b></p>
+
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+
+    <aside>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">🏠 Home</a></li>
+        <li><a href="#about">ℹ️ About</a></li>
+        <li><a href="#contact">📩 Contact</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 My Webpage | Made by Acire</p>
+  </footer>
+
+</body>
+</html>

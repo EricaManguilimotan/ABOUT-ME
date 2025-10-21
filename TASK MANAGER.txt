@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do Task Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    h2 {
+      color: #333;
+    }
+    input {
+      padding: 8px;
+      width: 200px;
+    }
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+    li {
+      padding: 8px;
+      margin: 5px 0;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .done {
+      color: green;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h2>To-Do Task Manager</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTaskBtn">Add Task</button>
+  <button id="markAllBtn">Mark All as Done</button>
+  <button id="clearBtn">Clear Completed</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskInput = document.getElementById('taskInput');
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    const markAllBtn = document.getElementById('markAllBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const taskList = document.getElementById('taskList');
+
+    addTaskBtn.addEventListener('click', () => {
+      const task = taskInput.value.trim();
+      if (task !== "") {
+        const li = document.createElement('li');
+        li.textContent = task;
+
+        
+        li.addEventListener('click', () => {
+          li.classList.toggle('done');
+        });
+
+        taskList.appendChild(li);
+        taskInput.value = "";
+      }
+    });
+
+    
+    markAllBtn.addEventListener('click', () => {
+      const items = document.querySelectorAll('#taskList li');
+      items.forEach(li => li.classList.add('done'));
+    });
+
+    
+    clearBtn.addEventListener('click', () => {
+      const doneItems = document.querySelectorAll('#taskList li.done');
+      doneItems.forEach(li => li.remove());
+    });
+  </script>
+</body>
+</html>

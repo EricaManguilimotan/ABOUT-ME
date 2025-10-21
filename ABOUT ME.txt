@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Acire</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+    }
+
+    .card {
+      background-color: #f7f7f7;
+      width: 300px;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    p {
+      color: #2b3df7;
+      font-size: 14px;
+      margin: 8px 0 15px 0;
+      transition: 0.3s ease;
+    }
+
+    button {
+      background-color: Pink;
+      border: none;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: deeppink;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="557962196_122238118832178511_687166549822289399_n.jpg" alt="Profile Picture" class="profile-img" />
+    <h2>ESM</h2>
+    <p id="description">Code is poetry written in logic. </p>
+    <button onclick="changeText()">About Me</button>
+  </div>
+
+  <script>
+    let changed = false;
+    function changeText() {
+      const desc = document.getElementById("description");
+      if (!changed) {
+        desc.textContent = "attract not chase";
+        changed = true;
+      } else {
+        desc.textContent = "I am a Full Stack Developer based in PH";
+        changed = false;
+      }
+    }
+  </script>
+</body>
+</html>

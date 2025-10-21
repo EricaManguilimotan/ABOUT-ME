@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>GOOD DAY!</h1>
+
+  <button onclick="doSomething()">Click Me</button>
+
+  <p id="p1">My name is Acire</p>
+
+  <script>
+    function doSomething() {
+      let p = document.getElementById("p1");
+      if (p.innerHTML === "My name is Acire") {
+        p.innerHTML = "Alpha";
+      } else {
+        
+      }
+    }
+  </script>
+  
+</body>
+</html>
